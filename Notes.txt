@@ -1,0 +1,26 @@
+/*************Css***********/
+
+Display
+    inline
+    inline-block
+    block
+    none
+
+width and height
+margin and padding
+border
+float
+color
+backgroundcolor
+clear: float
+overflow:hidden
+font
+
+
+/********************Jquery****************/
+
+javascript library
+simpler form implementation
+easy to use
+syntax => $('selector') or Jquery('selector')
+
