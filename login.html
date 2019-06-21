@@ -3,25 +3,41 @@
     <head>
         <title>Website wow</title>
         <link rel="stylesheet" href="loginstyle.css"/>
+        <script type="text/javascript">
+            function show(){
+                var el= document.querySelector(".userForm");
+                if(el.style.display === "none"){
+                    el.style.display="block";
+                }
+                else
+                    el.style.display="none";
+            }
+        </script>
     </head>
     <body>
+        <button id='btnLogin' class='textBox' onclick="show()">LOGIN</button>
         <div class="navbar">
             
-                <img id="logo" width="50px" height="50px" src="images/logo.jpg" alt="logo shown"/>
-            
-            <a id='rlink' href="index.html">Register</a>
-
+            <img id="logo" width="50px" height="50px" src="images/logo.jpg" alt="logo shown"/>
+            <div id='rlink'>
+                 <a  href="index.html">Register</a>
+            </div>
         </div>
+        <br><br>
         <center>
+                <h1>Login</h1><br><br>
                 <div class='userForm'>
-                        <div>
-                            <img width='100px' height='100px' src="images/user.png" alt="">
+                        <div id='icon-remove' onclick="show()">
+                            <img src="images/remove-icon.png" alt="remove icon">
                         </div>
                         <div>
-                            <form action="login.html">
-                                <input class='textBox' type="text" placeholder="Email" id='txtEmail' /><br>
+                            <img width='100px' height='100px' src="images/user.png" alt="user image"><br><br>
+                        </div>
+                        <div>
+                            <form action="index.html">
+                                <input class='textBox' type="text" placeholder="Email" id='txtEmail' /><br><br>
                                 <input class='textBox' type="text" placeholder="Password" id="txtPassword"/><br><br><br>
-                                <input class='textBox' type="submit" value="Login" />
+                                <input id='btnSubmit' class='textBox' type="submit" value="Login" />
                             </form>
                         </div>
             

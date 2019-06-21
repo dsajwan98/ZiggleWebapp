@@ -3,51 +3,77 @@
     <head>
 		<title>Login Page</title>
 		<link rel="stylesheet" href="registerstyle.css" />
+		<script type="text/javascript">
+			function show(){
+				var el=document.querySelector(".personal-info");
+				el.style.display="none";
+			}
+			function next(){
+				var el=document.querySelector(".account-info");
+				el.style.display="none";
+				document.querySelector(".personal-info").style.display="block";
+			} 
+			function back(){
+				var el=document.querySelector(".personal-info");	
+                el.style.display="none";
+				document.querySelector(".account-info").style.display="block";
+			}
+		</script>
     </head>
-    <body>
+    <body onload="show()">
 		<div class="navbar">
 			<img id="logo" width="50px" height="50px" src="images/logo.jpg" alt="logo shown"/>
 			<a id=rlink href="login.html">Login</a>	
 		</div>
-		<form action="index.html">
-			<div class='account-info'>
-		
+		<center>
+		<h1>Register</h1><br><br>
+		<form action="login.html">
+			<div class='account-info'><br><br>
+				<h3>Account Info</h3><br><br>
 				<table id='acc-info-table'>
 					<tr>
-						<td><input id="txtName" type="text" placeholder="Name"/></td>
-						<td><input id="txtEmail" type="text" placeholder="Email"/></td>
+						<td><label for="txtName">Name</label></td>
+						<td><input class='text-box' id="txtName" type="text" placeholder="Name"/></td>
+						<td><label for="txtEmail">Email</label></td>
+						<td><input class='text-box' id="txtEmail" type="text" placeholder="Email"/></td>						
 					</tr>
 					<tr>
-						<td><input id="txtPassword" type="text" placeholder="Password"/></td>
-						<td><input id="txtConfirmPassword" type="text" placeholder="ConfirmPassword"/></td>
+						<td><label for="txtPassword">Password</label></td>
+						<td><input class='text-box' id="txtPassword" type="text" placeholder="Password"/></td>
+						<td><label for="txtConfirmPassword">Confirm Password</label></td>
+					    <td><input class='text-box' id="txtConfirmPassword" type="text" placeholder="ConfirmPassword"/></td>
 					</tr>
 					
 				</table>
-		
+				<br><img id='btnNext' src="images/next-icon.png" width='50px' height='50px' alt="next icon" onclick="next()">
 			</div>
 				
-			<br><br>
+			
 		
 			<div class='personal-info'>
-		
+				<br><br><h3>Personal Info</h3><br><br>
 				<table id='pers-info-table'>
+					
 					<tr>
-						<td><input id="txtDob" type="text" placeholder="Name"/></td>
-						<td><input id="txtAddress" type="text" placeholder="Address"/></td>
-						<td><input id="txtContact" type="text" placeholder="Contact"/></td>
+						<td><label for="txtDob">Date Of Birth</label></td><td><input id="txtDob" class='text-box' type="text" placeholder="Name"/></td>
+						<td><label for="txtAddress">Address</label></td><td><input id="txtAddress" class='text-box'  type="text" placeholder="Address"/></td>
+						<td><label for="txtContact">Contact</label></td><td><input id="txtContact" class='text-box' type="text" placeholder="Contact"/></td>
 					</tr>
 					<tr>
-						<td><input id="txtFatherName" type="text" placeholder="Father Name"/></td>
-						<td><input id="txtCompanyName" type="text" placeholder="Company Name"/></td>
-						<td><input id="txtPlace" type="text" placeholder="Place"/></td>
+						<td><label for="txtFatherName">Father Name</label></td><td><input id="txtFatherName" class='text-box' type="text" placeholder="Father Name"/></td>
+						<td><label for="txtCompanyName">Company Name</label></td><td><input id="txtCompanyName" class='text-box'  type="text" placeholder="Company Name"/></td>
+						<td><label for="txtPlace">Place</label></td><td><input id="txtPlace" class='text-box' type="text" placeholder="Place"/></td>
 					</tr>
 						
 				</table>
-				
+				<br><img src="images/back-icon.png" onclick="back()" width='50px' height='50px' alt="next icon">
 		
 			</div>
 
-			<input type="submit" value="Submit"/>
+			
+			<br><br><br> <input id='btnSubmit' class='text-box' type="submit" value="Submit"/>
+		</center>
+			
 		</form>
 		
         
